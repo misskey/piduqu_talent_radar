@@ -1,0 +1,15 @@
+﻿#屏蔽IDEA相关文件和文件夹
+.idea/
+*.iml
+*.class
+
+#屏蔽编译文件
+target/
+piduqu/
+
+#屏蔽文件
+
+
+
+
+

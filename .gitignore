@@ -5,7 +5,7 @@
 
 #屏蔽编译文件
 target/
-piduqu/
+piduqulog/
 
 #屏蔽文件
 

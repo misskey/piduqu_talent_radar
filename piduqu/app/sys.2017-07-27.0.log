@@ -1,0 +1,54 @@
+2017-07-27 09:41:16.908 [restartedMain] DEBUG com.piduqu.radar.config.listener.ApplicationEventListener - 初始化环境变量
+2017-07-27 09:41:17.116 [restartedMain] INFO  com.piduqu.radar.Application - Starting Application on DESKTOP-OE039UN with PID 6892 (started by chenwei in F:\新工作文档\郫县\代码\piduqu_talent_radar)
+2017-07-27 09:41:17.117 [restartedMain] DEBUG com.piduqu.radar.Application - Running with Spring Boot v1.5.1.RELEASE, Spring v4.3.6.RELEASE
+2017-07-27 09:41:17.117 [restartedMain] INFO  com.piduqu.radar.Application - The following profiles are active: develop
+2017-07-27 09:41:17.244 [restartedMain] DEBUG com.piduqu.radar.config.listener.ApplicationEventListener - 初始化环境变量完成
+2017-07-27 09:41:17.877 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2017-07-27 09:41:21.548 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2017-07-27 09:41:21.565 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2017-07-27 09:41:21.566 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2017-07-27 09:41:21.567 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: C:\Users\chenwei\AppData\Local\Temp\
+2017-07-27 09:41:21.591 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2017-07-27 09:41:21.607 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2017-07-27 09:41:21.751 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2017-07-27 09:41:21.751 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2017-07-27 09:41:21.751 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2017-07-27 09:41:21.767 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2017-07-27 09:41:21.767 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2017-07-27 09:41:21.767 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2017-07-27 09:41:21.798 [restartedMain] DEBUG net.sf.ehcache.store.MemoryStore - Initialized net.sf.ehcache.store.MemoryStore for cachelist
+2017-07-27 09:41:21.858 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2017-07-27 09:41:21.860 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2017-07-27 09:41:21.861 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_DISK_SIZE
+2017-07-27 09:41:21.861 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_DISK_SIZE_BYTES
+2017-07-27 09:41:21.861 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2017-07-27 09:41:21.862 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2017-07-27 09:41:21.862 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: DISK_GET
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: DISK_PUT
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: DISK_REMOVE
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2017-07-27 09:41:21.878 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2017-07-27 09:41:21.902 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: cachelist
+2017-07-27 09:41:21.902 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'cachelist'.
+2017-07-27 09:41:21.902 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'cachelist'.
+2017-07-27 09:41:23.194 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2017-07-27 09:41:27.341 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-07-27 09:41:27.345 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-07-27 09:41:27.531 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-07-27 09:41:29.271 [restartedMain] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[10.101.1.222:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-07-27 09:41:29.399 [cluster-ClusterId{value='597944c971544f1aec765665', description='null'}-10.101.1.222:27018] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:3727}] to 10.101.1.222:27018
+2017-07-27 09:41:29.403 [cluster-ClusterId{value='597944c971544f1aec765665', description='null'}-10.101.1.222:27018] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=10.101.1.222:27018, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2126668}
+2017-07-27 09:41:34.341 [restartedMain] DEBUG com.piduqu.radar.config.listener.ApplicationEventListener - 应用刷新
+2017-07-27 09:41:34.357 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2017-07-27 09:41:34.377 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-80]
+2017-07-27 09:41:34.398 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-07-27 09:41:34.438 [restartedMain] DEBUG com.piduqu.radar.config.listener.ApplicationEventListener - 应用已启动完成
+2017-07-27 09:41:34.440 [restartedMain] INFO  com.piduqu.radar.Application - Started Application in 17.984 seconds (JVM running for 19.619)
+2017-07-27 09:41:34.440 [restartedMain] DEBUG com.piduqu.radar.Application - 启动成功

@@ -1,16 +1,11 @@
 package com.piduqu.radar.config.shiro;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.MemoryConstrainedCacheManager;
 import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
-import org.apache.shiro.web.filter.authc.AnonymousFilter;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -22,6 +17,8 @@ import org.springframework.web.filter.DelegatingFilterProxy;
 
 import javax.servlet.DispatcherType;
 import javax.servlet.Filter;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -92,8 +89,8 @@ public class ShiroConfig {
 
 
 		Map<String, Filter> filters = new HashMap<String, Filter>();
-		filters.put("perms", urlPermissionsFilter());
-		filters.put("anon", new AnonymousFilter());
+//		filters.put("perms", urlPermissionsFilter());
+//		filters.put("anon", new AnonymousFilter());
 		shiroFilter.setFilters(filters);
 
 		shiroFilter.setSecurityManager(securityManager);

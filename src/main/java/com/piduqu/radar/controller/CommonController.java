@@ -55,7 +55,15 @@ public class CommonController extends BaseController {
                 "特克斯和凯科斯群岛（英）","开曼群岛（英）","百慕大（英）",
                 "哥伦比亚","委内瑞拉","圭亚那","法属圭亚那","苏里南","厄瓜多尔","秘鲁","玻利维亚","巴西","智利","阿根廷","乌拉圭","巴拉圭"
         };
+
+        String[] nations = {"汉族","壮族","满族","回族","苗族","维吾尔族","土家族","彝族","蒙古族","藏族","布依族"	,"侗族",
+                "瑶族","朝鲜族","白族","哈尼族","哈萨克族	","黎族","傣族","畲族","傈僳族","仡佬族","东乡族","高山族",
+                "拉祜族","水族","佤族","纳西族","羌族","土族","仫佬族","锡伯族","柯尔克孜族","	达斡尔族","景颇族","毛南族",
+                "撒拉族","塔吉克族","阿昌族","普米族","鄂温克族","怒族","京族","基诺族","德昂族","	保安族","俄罗斯族","	裕固族",
+                "乌兹别克族"	,"门巴族","鄂伦春族","独龙族","塔塔尔族","赫哲族","珞巴族","布朗族"
+        };
         Arrays.sort(subcontries, comparator);
+        Arrays.sort(nations,comparator);
 
         String[] contries = new String[218];
 //        for (String s:contries){
@@ -63,7 +71,8 @@ public class CommonController extends BaseController {
 //        }
         System.arraycopy(china,0,contries,0,china.length);
         System.arraycopy(subcontries,0,contries,china.length,subcontries.length);
-        model.put("nationList",contries);
+        model.put("contrylst",contries);
+        model.put("nationlst",nations);
         return "inputResume";
 //        return "inputResume";
     }

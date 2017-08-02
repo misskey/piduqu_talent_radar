@@ -26,7 +26,7 @@ import java.io.Serializable;
  * 1.
  */
 @Controller
-//@RequestMapping("")
+@RequestMapping("/resume")
 public class ResumeController implements Serializable {
 
 //    @Resource
@@ -35,7 +35,7 @@ public class ResumeController implements Serializable {
     @Resource
     TalentDataService talentDataService;
 
-    @RequestMapping("/resume/import")
+    @RequestMapping("/import")
     @ResponseBody
     public JsonResult resumeImport(@RequestParam(value = "file", required = false) MultipartFile file,@Valid TalentResume resume,BindingResult result){
 
@@ -55,7 +55,7 @@ public class ResumeController implements Serializable {
         return JsonResult.success();
     }
 
-    @RequestMapping("/resume/findByResumeId")
+    @RequestMapping("/findByResumeId")
     @ResponseBody
     public JsonResult findByResumeId(@Valid String resume_id,BindingResult result){
 
@@ -74,7 +74,7 @@ public class ResumeController implements Serializable {
         return JsonResult.success();
     }
 
-    @RequestMapping("/resume/findByCondition")
+    @RequestMapping("/findByCondition")
     @ResponseBody
     public JsonResult findByCondition(@Valid TalentResume resume,BindingResult result){
 
@@ -90,7 +90,7 @@ public class ResumeController implements Serializable {
 
 
 
-    @RequestMapping("/resume/export")
+    @RequestMapping("/export")
     @ResponseBody
     public JsonResult export(String[] resume_id,String[] return_field,HttpServletResponse response){
 

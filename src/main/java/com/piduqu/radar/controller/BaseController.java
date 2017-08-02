@@ -89,6 +89,31 @@ public class BaseController {
     	PageRequest pageRequest = new PageRequest(page, size, sort);
     	return pageRequest;
     }
+
+	/**
+	 * 获取分页请求
+	 * @return
+	 */
+	protected PageRequest getPageRequest(String sortName,String sortOrder){
+		int page = 1;
+		int size = 10;
+		Sort sort = null;
+		try {
+			if(StringUtils.isNoneBlank(sortName) && StringUtils.isNoneBlank(sortOrder)){
+				if(sortOrder.equalsIgnoreCase("desc")){
+					sort = new Sort(Direction.DESC, sortName);
+				}else{
+					sort = new Sort(Direction.ASC, sortName);
+				}
+			}
+			page = Integer.parseInt(request.getParameter("pageNumber")) - 1;
+			size = Integer.parseInt(request.getParameter("pageSize"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		PageRequest pageRequest = new PageRequest(page, size, sort);
+		return pageRequest;
+	}
     
     /**
      * 获取分页请求

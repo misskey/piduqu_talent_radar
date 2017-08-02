@@ -40,7 +40,7 @@ public class UserController extends BaseController {
     private TalentDataService talentDataService;
 
     @RequestMapping(value = { "/userList" })
-    @RequiresPermissions("user:userList:*")//权限管理;
+//    @RequiresPermissions("user:userList:*")//权限管理;
     public String userList(String searchText, ModelMap model){
         Subject currentUser = SecurityUtils.getSubject();
         SimpleSpecificationBuilder<User> builder = new SimpleSpecificationBuilder<User>();

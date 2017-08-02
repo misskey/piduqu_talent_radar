@@ -34,6 +34,7 @@ public class User extends BaseEntity{
     private Integer isFirst;
 
     private String orgId;
+    private String pID;
 
     private String isAdmin;
 
@@ -59,6 +60,14 @@ public class User extends BaseEntity{
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getpID() {
+        return pID;
+    }
+
+    public void setpID(String pID) {
+        this.pID = pID;
     }
 
     public String getUserName() {

@@ -26,6 +26,8 @@ public class IMemberServiceImpl extends BaseServiceImpl<User, String> implements
     @Resource
     private IUserDao userDao;
 
+
+
     @Override
     public IBaseDao<User, String> getBaseDao() {
         return this.userDao;

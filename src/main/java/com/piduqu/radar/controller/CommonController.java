@@ -54,11 +54,9 @@ public class CommonController extends BaseController {
                 "哥伦比亚","委内瑞拉","圭亚那","法属圭亚那","苏里南","厄瓜多尔","秘鲁","玻利维亚","巴西","智利","阿根廷","乌拉圭","巴拉圭"
         };
         Arrays.sort(contries, comparator);
-
-        for (String s:contries){
-            System.out.println(s);
-        }
-
+//        for (String s:contries){
+//            System.out.println(s);
+//        }
         model.put("nationList",contries);
         return "inputResume";
 //        return "inputResume";

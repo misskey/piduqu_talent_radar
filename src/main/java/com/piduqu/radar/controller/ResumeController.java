@@ -43,6 +43,7 @@ public class ResumeController implements Serializable {
             return JsonResult.failure(CommonUtils.getErrorsList(result.getFieldErrors()));
         }
         //TODO 头像上传
+
         try {
             talentDataService.save(resume, "talent_resume");
         }catch (Exception e){
@@ -107,9 +108,7 @@ public class ResumeController implements Serializable {
 
         }else{
             //TODO 按照模板生成简历详情
-
         }
-
         //TODO (组合简历查询条件)
 //        resumeService.findAll();
         return JsonResult.success();

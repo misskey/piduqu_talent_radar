@@ -74,7 +74,6 @@ public class CommonController extends BaseController {
         model.put("contrylst",contries);
         model.put("nationlst",nations);
         return "inputResume";
-//        return "inputResume";
     }
 
     @RequestMapping("setting")

@@ -1,4 +1,4 @@
-package com.piduqu.radar.util;
+package com.piduqu.radar.common.utils;
 
 import org.apache.log4j.Logger;
 

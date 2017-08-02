@@ -25,8 +25,10 @@ public class CommonController extends BaseController {
         Comparator comparator = Collator.getInstance(Locale.CHINA);
 
 
+//        String[] contries = {};
 
-        String[] contries = {"蒙古","朝鲜","韩国","日本",
+        String[] china = {"中国大陆","中国台湾","中国香港","中国澳门"};
+        String[] subcontries = {"蒙古","朝鲜","韩国","日本",
                 "菲律宾","越南","老挝","柬埔寨","缅甸","泰国","马来西亚","文莱","新加坡","印度尼西亚", "东帝汶",
                 "尼泊尔","不丹","孟加拉国","印度","巴基斯坦","斯里兰卡","马尔代夫",
                 "哈萨克斯坦","吉尔吉斯斯坦","塔吉克斯坦","乌兹别克斯坦","土库曼斯坦",
@@ -53,10 +55,14 @@ public class CommonController extends BaseController {
                 "特克斯和凯科斯群岛（英）","开曼群岛（英）","百慕大（英）",
                 "哥伦比亚","委内瑞拉","圭亚那","法属圭亚那","苏里南","厄瓜多尔","秘鲁","玻利维亚","巴西","智利","阿根廷","乌拉圭","巴拉圭"
         };
-        Arrays.sort(contries, comparator);
+        Arrays.sort(subcontries, comparator);
+
+        String[] contries = new String[218];
 //        for (String s:contries){
-//            System.out.println(s);
+            System.out.println(subcontries.length);
 //        }
+        System.arraycopy(china,0,contries,0,china.length);
+        System.arraycopy(subcontries,0,contries,china.length,subcontries.length);
         model.put("nationList",contries);
         return "inputResume";
 //        return "inputResume";

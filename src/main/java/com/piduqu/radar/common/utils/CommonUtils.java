@@ -183,30 +183,13 @@ public class CommonUtils {
     }
 
     /**
-     * 判断对象不为空
-     * @param obj
-     * @return
+     * 判断是否是邮箱
+     * @param email
+     * @return true:是  false:否
      */
-    public static boolean isNotEmpty(Object obj) {
-        return !isEmpty(obj);
-    }
-
-    public static boolean isPhone(String phone) {
-        if (isEmpty(phone)) {
-            return false;
-        }
-        boolean tag = true;
-        final String pattern1 = "^0?(13|14|15|18|17)[0-9]{9}$";
-        final Pattern pattern = Pattern.compile(pattern1);
-        final Matcher mat = pattern.matcher(phone);
-        if (!mat.find()) {
-            tag = false;
-        }
-        return tag;
-    }
-
-    public static boolean isEmail(String email) {
-        if (isEmpty(email)) {
+    public static boolean isEmail(String email)
+    {
+        if (isEmpty(email)){
             return false;
         }
         boolean tag = true;
@@ -218,4 +201,34 @@ public class CommonUtils {
         }
         return tag;
     }
+
+    /**
+     * 判断是否是手机号
+     * @param phone
+     * @return
+     */
+    public static boolean isPhone(String phone)
+    {
+        if (isEmpty(phone)){
+            return false;
+        }
+        boolean tag = true;
+        final String pattern1 = "^0?(13|14|15|18|17)[0-9]{9}$";
+        final Pattern pattern = Pattern.compile(pattern1);
+        final Matcher mat = pattern.matcher(phone);
+        if (!mat.find()) {
+            tag = false;
+        }
+        return tag;
+    }
+    /**
+     * 判断对象不为空
+     * @param obj
+     * @return
+     */
+    public static boolean isNotEmpty(Object obj) {
+        return !isEmpty(obj);
+    }
+
+
 }

@@ -1,8 +1,4 @@
-package com.piduqu.radar.controller;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
+package com.piduqu.radar.test;
 
 import java.text.Collator;
 import java.util.Arrays;
@@ -10,21 +6,18 @@ import java.util.Comparator;
 import java.util.Locale;
 
 /**
- * Created by Administrator on 2017/7/27.
+ * Created by liu_zhangyun on 2017/7/27.
+ * Cell:15884457479
+ * Email:zhangyun.liu@hirebigdata.cn
+ * Description:
+ * <p/>
+ * Functions:
+ * 1.
  */
-@Controller
-public class CommonController extends BaseController {
-    @RequestMapping("dashboard")
-    public String dashboard(){
-        return "dashboard";
-    }
+public class LetterSort {
 
-    @RequestMapping("inputResume")
-    public String inputResume(ModelMap model){
-
+    public static void  main(String[] args){
         Comparator comparator = Collator.getInstance(Locale.CHINA);
-
-
 
         String[] contries = {"蒙古","朝鲜","韩国","日本",
                 "菲律宾","越南","老挝","柬埔寨","缅甸","泰国","马来西亚","文莱","新加坡","印度尼西亚", "东帝汶",
@@ -34,8 +27,7 @@ public class CommonController extends BaseController {
                 "爱沙尼亚","拉脱维亚","立陶宛","白俄罗斯","俄罗斯","乌克兰","摩尔多瓦",
                 "波兰","捷克","斯洛伐克","匈牙利","德国","奥地利","瑞士","列支敦士登",
                 "英国","爱尔兰","荷兰","比利时","卢森堡","法国","摩纳哥",
-                "罗马尼亚","保加利亚","塞尔维亚","马其顿","阿尔巴尼亚","希腊","斯洛文尼亚","克罗地亚","波斯尼亚和墨塞哥维那","意大利","梵蒂冈","圣马力诺","马耳他","西班牙","葡萄牙",
-                "安道尔",
+                "罗马尼亚","保加利亚","塞尔维亚","马其顿","阿尔巴尼亚","希腊","斯洛文尼亚","克罗地亚","波斯尼亚和墨塞哥维那","意大利","梵蒂冈","圣马力诺","马耳他","西班牙","葡萄牙","安道尔",
                 "埃及","利比亚","苏丹","突尼斯","阿尔及利亚","摩洛哥","亚速尔群岛（葡）","马德拉群岛（葡）",
                 "埃塞俄比亚","厄立特里亚","索马里","吉布提","肯尼亚","坦桑尼亚","乌干达","卢旺达","布隆迪","塞舌尔",
                 "乍得","中非","喀麦隆","赤道几内亚","加蓬","刚果共和国","刚果民主共和国",
@@ -53,19 +45,10 @@ public class CommonController extends BaseController {
                 "特克斯和凯科斯群岛（英）","开曼群岛（英）","百慕大（英）",
                 "哥伦比亚","委内瑞拉","圭亚那","法属圭亚那","苏里南","厄瓜多尔","秘鲁","玻利维亚","巴西","智利","阿根廷","乌拉圭","巴拉圭"
         };
-        Arrays.sort(contries, comparator);
+        Arrays.sort(contries,comparator);
 
         for (String s:contries){
             System.out.println(s);
         }
-
-        model.put("nationList",contries);
-        return "inputResume";
-//        return "inputResume";
-    }
-
-    @RequestMapping("setting")
-    public String setting(){
-        return "setting";
     }
 }

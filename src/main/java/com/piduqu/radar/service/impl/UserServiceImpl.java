@@ -1,30 +1,23 @@
 package com.piduqu.radar.service.impl;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
 import com.piduqu.radar.common.utils.CommonUtils;
+import com.piduqu.radar.common.utils.MD5Utils;
 import com.piduqu.radar.dao.IUserDao;
 import com.piduqu.radar.dao.support.IBaseDao;
-import com.piduqu.radar.entity.Role;
 import com.piduqu.radar.entity.User;
-import com.piduqu.radar.service.IRoleService;
 import com.piduqu.radar.service.IUserService;
 import com.piduqu.radar.service.support.impl.BaseServiceImpl;
-import com.piduqu.radar.common.utils.MD5Utils;
-
 import com.piduqu.radar.web.request.UserPara;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  *
  * @author 无聊的挂面
- * @since 2017/7/11 18:42 
+ * @since 2017/7/11 18:42
  */
 @Service
 public class UserServiceImpl extends BaseServiceImpl<User, String> implements IUserService {

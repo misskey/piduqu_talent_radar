@@ -11,9 +11,7 @@ import com.piduqu.radar.service.specification.SpecificationOperator;
 import com.piduqu.radar.web.request.UserPara;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
@@ -101,7 +99,6 @@ public class UserController extends BaseController {
     public String userAddPage(){
         return "userAddPage";
     }
-
     @RequestMapping("userAdd")
     @ResponseBody
     public JsonResult userAdd(@Valid UserPara userParam, BindingResult result){
@@ -111,4 +108,16 @@ public class UserController extends BaseController {
         userService.saveOrUpdate(userParam);
         return JsonResult.success();
     }
+
+    @RequestMapping("userFilter")
+    @ResponseBody
+    public JsonResult userFilter(@Valid String userName,BindingResult result){
+        if(result.hasErrors()){
+            return JsonResult.failure(CommonUtils.getErrorsList(result.getFieldErrors()));
+        }
+        userService.findByUserName(userName);
+        return JsonResult.success();
+    }
+
+
 }

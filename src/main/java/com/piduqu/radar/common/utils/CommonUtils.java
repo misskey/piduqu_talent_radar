@@ -1,12 +1,13 @@
 package com.piduqu.radar.common.utils;
 
-import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.validation.FieldError;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author 无聊的挂面
@@ -188,5 +189,33 @@ public class CommonUtils {
      */
     public static boolean isNotEmpty(Object obj) {
         return !isEmpty(obj);
+    }
+
+    public static boolean isPhone(String phone) {
+        if (isEmpty(phone)) {
+            return false;
+        }
+        boolean tag = true;
+        final String pattern1 = "^0?(13|14|15|18|17)[0-9]{9}$";
+        final Pattern pattern = Pattern.compile(pattern1);
+        final Matcher mat = pattern.matcher(phone);
+        if (!mat.find()) {
+            tag = false;
+        }
+        return tag;
+    }
+
+    public static boolean isEmail(String email) {
+        if (isEmpty(email)) {
+            return false;
+        }
+        boolean tag = true;
+        final String pattern1 = "^([a-z0-9A-Z]+[-|\\.|_]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+        final Pattern pattern = Pattern.compile(pattern1);
+        final Matcher mat = pattern.matcher(email);
+        if (!mat.find()) {
+            tag = false;
+        }
+        return tag;
     }
 }

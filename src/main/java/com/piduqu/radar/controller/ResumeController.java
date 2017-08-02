@@ -2,7 +2,7 @@ package com.piduqu.radar.controller;
 
 import com.piduqu.radar.common.JsonResult;
 import com.piduqu.radar.common.utils.CommonUtils;
-import com.piduqu.radar.entity.mongo.Talent_Resume;
+import com.piduqu.radar.entity.mongo.TalentResume;
 import com.piduqu.radar.service.TalentDataService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -37,7 +37,7 @@ public class ResumeController implements Serializable {
 
     @RequestMapping("/resume/import")
     @ResponseBody
-    public JsonResult resumeImport(@RequestParam(value = "file", required = false) MultipartFile file,@Valid Talent_Resume resume,BindingResult result){
+    public JsonResult resumeImport(@RequestParam(value = "file", required = false) MultipartFile file,@Valid TalentResume resume,BindingResult result){
 
         if(result.hasErrors()){
             return JsonResult.failure(CommonUtils.getErrorsList(result.getFieldErrors()));
@@ -76,7 +76,7 @@ public class ResumeController implements Serializable {
 
     @RequestMapping("/resume/findByCondition")
     @ResponseBody
-    public JsonResult findByCondition(@Valid Talent_Resume resume,BindingResult result){
+    public JsonResult findByCondition(@Valid TalentResume resume,BindingResult result){
 
         if(result.hasErrors()){
             return JsonResult.failure(CommonUtils.getErrorsList(result.getFieldErrors()));

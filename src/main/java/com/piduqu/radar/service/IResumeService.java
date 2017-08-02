@@ -1,6 +1,6 @@
 package com.piduqu.radar.service;
 
-import com.piduqu.radar.entity.mongo.Talent_Resume;
+import com.piduqu.radar.entity.mongo.TalentResume;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * Functions:
  * 1.
  */
-public interface IResumeService extends MongoRepository<Talent_Resume, Long> {
+public interface IResumeService extends MongoRepository<TalentResume, Long> {
 
 
 

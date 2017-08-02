@@ -5,7 +5,7 @@ import com.mongodb.QueryBuilder;
 import com.piduqu.radar.common.JsonResult;
 import com.piduqu.radar.common.utils.CommonUtils;
 import com.piduqu.radar.entity.mongo.InnerResume;
-import com.piduqu.radar.entity.mongo.Talent_Resume;
+import com.piduqu.radar.entity.mongo.TalentResume;
 import com.piduqu.radar.service.TalentDataService;
 import jxl.Workbook;
 import jxl.write.Label;
@@ -96,14 +96,14 @@ public class TalentDataServiceImpl implements TalentDataService {
     @Override
     public JsonResult save(Object o, String collectionName) throws ParseException {
 //        mongoTemplate.save(o,collectionName);
-        if(!CommonUtils.isPhone(((Talent_Resume) o).getTelphone())){
+        if(!CommonUtils.isPhone(((TalentResume) o).getTelphone())){
             return JsonResult.failure("电话号码格式不正确");
         }
-        else if(!CommonUtils.isEmail(((Talent_Resume) o).getEmail())){
+        else if(!CommonUtils.isEmail(((TalentResume) o).getEmail())){
             return JsonResult.failure("邮箱格式不正确");
         }
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        ((Talent_Resume) o).setImport_time(sdf.parse(sdf.format(new Date())));
+        ((TalentResume) o).setImport_time(sdf.parse(sdf.format(new Date())));
         mongoTemplate.insert(o,collectionName);
         return JsonResult.success("简历导入成功");
     }

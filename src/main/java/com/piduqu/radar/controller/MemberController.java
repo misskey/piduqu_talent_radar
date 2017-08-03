@@ -35,7 +35,7 @@ public class MemberController extends BaseController {
      * 成员列表
      */
     @ResponseBody
-    @RequestMapping("/memberList")
+    @RequestMapping(value = "/memberList",headers = "Accept=application/json")
     public JsonResult memberList() {
         Page<User> all = memberService.getmemberList(getPageRequest("createTime", "desc"));
 //        Map map = new HashMap();

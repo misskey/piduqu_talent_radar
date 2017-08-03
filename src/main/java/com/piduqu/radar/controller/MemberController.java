@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,6 +34,7 @@ public class MemberController extends BaseController {
     /**
      * 成员列表
      */
+    @ResponseBody
     @RequestMapping("/memberList")
     public JsonResult memberList() {
         Page<User> all = memberService.getmemberList(getPageRequest("createTime", "desc"));

@@ -5,6 +5,7 @@ import com.piduqu.radar.entity.User;
 import com.piduqu.radar.service.IAccountService;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -19,7 +20,7 @@ public class AccountController extends BaseController {
 
     @Resource
     private IAccountService accountService;
-
+    @ResponseBody
     @RequestMapping("/accountList")
     public JsonResult accountList() {
         Page<User> accountList = accountService.getAccountList(getPageRequest("createTime", "desc"));

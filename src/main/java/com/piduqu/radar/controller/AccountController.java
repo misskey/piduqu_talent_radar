@@ -23,6 +23,7 @@ public class AccountController extends BaseController {
     @ResponseBody
     @RequestMapping(value = "/accountList",headers = "Accept=application/json")
     public JsonResult accountList() {
+
         Page<User> accountList = accountService.getAccountList(getPageRequest("createTime", "desc"));
         return JsonResult.success(accountList.getContent());
     }

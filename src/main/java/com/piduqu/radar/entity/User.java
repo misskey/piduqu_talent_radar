@@ -34,6 +34,8 @@ public class User extends BaseEntity{
     private Integer isFirst;
 
     private String orgId;
+
+    private Integer locked;
     private String pID;
 
     private String isAdmin;
@@ -56,6 +58,14 @@ public class User extends BaseEntity{
 
     public String getId() {
         return id;
+    }
+
+    public Integer getLocked() {
+        return locked;
+    }
+
+    public void setLocked(Integer locked) {
+        this.locked = locked;
     }
 
     public void setId(String id) {

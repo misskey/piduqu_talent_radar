@@ -27,6 +27,8 @@ public class IAccountServiceImpl extends BaseServiceImpl<User,String> implements
     public Page<User> getAccountList(PageRequest pageRequest) {
         SimpleSpecificationBuilder<User> builder = new SimpleSpecificationBuilder<User>();
         builder.add("pID", SpecificationOperator.Operator.likeL.name(), "001");
+        builder.add("locked", SpecificationOperator.Operator.eq.name(), 0);
+
         Page<User> all = findAll(builder.generateSpecification(), pageRequest);
         return all;
     }

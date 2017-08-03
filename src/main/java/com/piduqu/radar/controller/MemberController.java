@@ -35,9 +35,9 @@ public class MemberController extends BaseController {
      */
     @RequestMapping("/memberList")
     public JsonResult memberList() {
-        Page<User> all = memberService.getmemberList(getPageRequest("create_time", "desc"));
-        Map map = new HashMap();
-        map.put("memberList", all);
-        return JsonResult.success(map);
+        Page<User> all = memberService.getmemberList(getPageRequest("createTime", "desc"));
+//        Map map = new HashMap();
+//        map.put("memberList", all.getContent());
+        return JsonResult.success(all.getContent());
     }
 }
